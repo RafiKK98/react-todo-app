@@ -38,7 +38,6 @@ function App() {
 
     const numberOfCompletedTasks = tasks.filter((task) => task.done).length;
     const numberOfTotalTasks = tasks.length;
-    const message = 'test';
 
     function getMessage() {
         const percentage = (numberOfCompletedTasks / numberOfTotalTasks) * 100;
@@ -64,7 +63,6 @@ function App() {
             <h1>{numberOfCompletedTasks}/{numberOfTotalTasks} Complete</h1>
             <h2>{getMessage()}</h2>
             <TaskFrom onAdd={name => addTask(name)} />
-            {/*<Task />*/}
             {
                 tasks.map((task, index) => (
                     <Task {...task}
